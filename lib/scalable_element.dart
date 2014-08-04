@@ -88,7 +88,7 @@ class ScalableElement extends PolymerElement {
     var element = event.toElement;
     if (element.classes.contains('top')) {
       shiftTop(event);
-    } else {
+    } else if (element.classes.contains('right')) {
       shiftBottom(event);
     }
   }
@@ -97,7 +97,7 @@ class ScalableElement extends PolymerElement {
     var element = event.toElement;
     if (element.classes.contains('left')) {
       shiftLeft(event);
-    } else {
+    } else if (element.classes.contains('right')) {
       shiftRight(event);
     }
   }
