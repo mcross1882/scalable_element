@@ -1,0 +1,33 @@
+<!--
+Provides a <scalable-element> for resizing and translating other HTML elements
+
+Author:  Matthew S. Cross <blacklightgfx@gmail.com>
+License: Apache V2
+URL:     https://github.com/mcross1882/scalable_element
+-->
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<polymer-element name="scalable-element" on-click="{{toggleSelect}}">
+
+  <template>
+    <link rel="stylesheet" type="text/css" href="scalable_element.css" />
+
+    <div id="overflow-container">
+      <content></content>
+    </div>
+
+    <div id="tab-controls">
+      <div class="control top left"></div>
+      <div class="control top center"></div>
+      <div class="control top right"></div>
+      <div class="control middle left"></div>
+      <div class="control middle center"></div>
+      <div class="control middle right"></div>
+      <div class="control bottom left"></div>
+      <div class="control bottom center"></div>
+      <div class="control bottom right"></div>
+    </div>
+  </template>
+
+  <script type="application/dart" src="scalable_element.dart"></script>
+</polymer-element>
